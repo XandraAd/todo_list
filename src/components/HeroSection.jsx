@@ -95,9 +95,9 @@ const HeroSection = ({
             {getStats()}
           </Text>
           <Button
-          //colorScheme="twitter"
+          colorScheme="twitter"
             paddingBlockStart={"12px"}
-            bgColor= {`${isDarkMode ?"transparent" :"whiteAlpha.900" }`} 
+            bgColor= {`${isDarkMode ?"blue.500" :"whiteAlpha.900" }`} 
             color={`${isDarkMode ?"whiteAlpha.700" :"gray.500" }`}   
             fontWeight={"400"}
             onClick={clearCompletedTask}
@@ -139,7 +139,8 @@ const HeroSection = ({
           bgColor={`${isDarkMode ?"blackAlpha.900" :"#fff" }`} 
           paddingInline={18}
           gap={"2px"}
-          rounded="lg"
+          borderTopRadius="lg"
+      
           pos={"absolute"}
           top={{ base: "17rem", md: "16rem", lg: "15rem", xl: "15rem" }}
           left={{ base: "1.3rem", md: "3rem", lg: "10.5rem", xl: "22rem" }}
@@ -194,9 +195,11 @@ const HeroSection = ({
                     <Flex>
                       <Icon
                         as={task.completed ? MdCheck : MdCancel}
-                        color={task.completed ? "#4299E1" : "#FDFDFD"}
+                        color={task.completed ? (isDarkMode ? "whiteAlpha.900" : "#4299E1") : (isDarkMode ? "blue.700" : "#FDFDFD")}
+                       
                       
-                        bgColor={task.completed ? "#fff" : "#63B3ED"}
+                        bgColor={task.completed ? (isDarkMode ? "transparent" : "#fff") : (isDarkMode ? "whiteAlpha.900" : "#63B3ED")}
+                       
                         w={"20px"}
                         h={"20px"}
                         marginRight={"5px"}
