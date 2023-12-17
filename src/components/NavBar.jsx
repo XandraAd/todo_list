@@ -30,10 +30,10 @@ const NavBar = () => {
          justifyContent={'space-between'}
          marginInline={{base:'20px',md:"20px",lg: "10px", xl: "10" }}>
        
-        <Text fontSize="3xl"  marginLeft={{base:'0',md:"25px",lg: "155px", xl: "320px" }} textTransform={"uppercase"} color={`${isDarkMode ?"#000" :"#FFF" }`}>
+        <Text fontSize="3xl"  marginLeft={{base:'0',md:"70px",lg: "200px", xl: "320px" }} textTransform={"uppercase"} color={`${isDarkMode ?"#000" :"#FFF" }`}>
           ToDo
         </Text>
-<Box width={{base:'35px',md:"11em",lg: "20em", xl: "30em" }}>
+<Box width={{base:'-8px',md:"8rem",lg: "16.5rem", xl: "30em" }}>
 {isDarkMode ? (
               <Icon
                 as={BsSun}

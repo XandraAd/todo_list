@@ -83,11 +83,11 @@ const HeroSection = ({
 
     return (
       <Box
-        w={{ base: "91vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
-        h={"50px"}
-        marginTop={{ base: "30px", md: "2px", lg: "2px", xl: "2px" }}
+        w={{ base: "90vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
+        h={"60px"}
+        marginTop={{ base: "35px", md: "2px", lg: "2px", xl: "2px" }}
         pos={"relative"}
-        left={{ base: "25px", md: "50px", lg: "167px", xl: "350px" }}
+        left={{ base: "21px", md: "6rem", lg: "13.5rem", xl: "350px" }}
         bgColor={`${isDarkMode ?"#000" :"whiteAlpha.900" }`}       
       >
         <Flex justifyContent="space-between" margin="10px" color={`${isDarkMode ?"#000" :"gray.500" }`}>
@@ -95,8 +95,10 @@ const HeroSection = ({
             {getStats()}
           </Text>
           <Button
-          colorScheme="twitter"
-            paddingBlockStart={"12px"}
+          //colorScheme="twitter"
+          h={"2rem"}
+          marginTop={"1rem"}
+           // paddingBlockStart={"12px"}
             bgColor= {`${isDarkMode ?"blue.500" :"whiteAlpha.900" }`} 
             color={`${isDarkMode ?"whiteAlpha.700" :"gray.500" }`}   
             fontWeight={"400"}
@@ -122,19 +124,14 @@ const HeroSection = ({
       <Box bgColor={`${isDarkMode ?"gray.900" :"blackAlpha.50" }`} h={"100vh"}>
         <Tabs
           display={"flex"}
-          alignItems={{
-            base: "center",
-            md: "center",
-            lg: "center",
-            xl: "center",
-          }}
+          alignItems={"center"}
           justifyContent={{
             base: "space-between",
             md: "center",
             lg: "center",
             xl: "center",
           }}
-          width={{ base: "92vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
+          width={{ base: "90vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
           height={{ base: "10vh", md: "8vh", lg: "10vh", xl: "10vh" }}
           bgColor={`${isDarkMode ?"blackAlpha.900" :"#fff" }`} 
           paddingInline={18}
@@ -143,7 +140,7 @@ const HeroSection = ({
       
           pos={"absolute"}
           top={{ base: "17rem", md: "16rem", lg: "15rem", xl: "15rem" }}
-          left={{ base: "1.3rem", md: "3rem", lg: "10.5rem", xl: "22rem" }}
+          left={{ base: "1.3rem", md: "6rem", lg: "13.5rem", xl: "22rem" }}
         >
           <TabList
             border={"none"}
@@ -158,7 +155,7 @@ const HeroSection = ({
           <Divider
             borderColor={`${isDarkMode ?"whiteAlpha.900" :"blackAlpha.900" }`}  
             mt={"3rem"}
-            w={{ base: "91vw", md: "73vw", lg: "54vw", xl: "43vw" }}
+            w={{ base: "89vw", md: "73vw", lg: "56vw", xl: "43vw" }}
             pos={"absolute"}
             left={{ base: ".17rem", md: ".3rem", lg: ".28rem", xl: ".28rem" }}
           />
@@ -171,18 +168,18 @@ const HeroSection = ({
             {filteredTasks.map((task) => {
               return (
                 <Box
-                  w={{ base: "91vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
+                  w={{ base: "90vw", md: "74vw", lg: "57vw", xl: "43.5vw" }}
                   
                   pos={"relative"}
                   zIndex={"800"}
                   top={{ base: "35px", md: ".5rem", lg: ".5rem", xl: ".5rem" }}
                   left={{
-                    base: "1.5rem",
-                    md: "3rem",
-                    lg: "10.5rem",
+                    base: "1.3rem",
+                    md: "6rem",
+                    lg: "13.5rem",
                     xl: "22rem",
                   }}
-                  //bgColor= {`${isDarkMode ?"blue.50" :"#fdfdfd" }`}
+                  
                   mt={0}
                   key={task.id}
                   fontWeight="semibold"
@@ -202,7 +199,8 @@ const HeroSection = ({
                        
                         w={"20px"}
                         h={"20px"}
-                        marginRight={"5px"}
+                        marginInline={"7px"}
+                        marginTop={"4px"}
                         fontSize={{
                           base: "2xl",
                           md: "2xl",
@@ -211,7 +209,7 @@ const HeroSection = ({
                         }}
                         rounded="2rem"
                         p={{ base: "0", md: "1", lg: "1", xl: "1" }}
-                        ms="auto"
+                        
                         cursor="pointer"
                         onClick={() => toggleTaskCompletion(task.id)}
                       />

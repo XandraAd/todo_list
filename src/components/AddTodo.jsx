@@ -32,11 +32,11 @@ setItem(e.target.value)
       <InputGroup 
     size='md' 
     display="flex"  
-    w={{ base: "92vw",md:"74vw", lg: "57vw",xl:"43vw" }} 
+    w={{ base: "90vw",md:"74vw", lg: "57vw",xl:"43vw" }} 
     m='5' 
     position="absolute" 
     top="120px" 
-    left={{ base: "0",md:"1.8em", lg: "9em",xl:"21em" }}>
+    left={{ base: "0",md:"4.5rem", lg: "12rem",xl:"21em" }}>
       <Input placeholder='Create new Todo item'
       name='text' value={item} py="2rem" bgColor={`${isDarkMode ?"#000" :"#FFF" }`}  onChange={handleChange} required/>
       <InputRightElement 
